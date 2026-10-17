@@ -13,3 +13,4 @@
 On-screen credit line for the end card: "Photos: Friends of Europe, Steve Jurvetson, Oracle PR / Hartmann Studios (CC BY 2.0); IMF; Carol M. Highsmith / Library of Congress."
 
 `cut_*.png` are cutouts of the photos above (background removed with rembg / ISNet), same credits apply.
+| tex_paper.jpg | Crumpled kraft paper texture | Engin Akyurt | Unsplash licence | https://unsplash.com/photos/a-piece-of-brown-paper-that-has-been-wrinkled-FSuGKDspBQo |
