@@ -22,11 +22,11 @@ await page.goto(url);
 await page.evaluate(() => document.fonts.ready);
 for (let f = 0; f < frames; f++) {
   await page.evaluate(t => window.render(t), f / fps);
-  await page.screenshot({ path: `${framesDir}/f${String(f).padStart(5, '0')}.png`, omitBackground: alpha });
+  await page.screenshot(alpha ? { path: `${framesDir}/f${String(f).padStart(5, '0')}.png`, omitBackground: true } : { path: `${framesDir}/f${String(f).padStart(5, '0')}.jpg`, type: 'jpeg', quality: 94 });
 }
 await browser.close();
 
-const input = ['-y', '-framerate', String(fps), '-i', `${framesDir}/f%05d.png`];
+const input = ['-y', '-framerate', String(fps), '-i', `${framesDir}/f%05d.${alpha ? 'png' : 'jpg'}`];
 if (alpha) {
   execFileSync('ffmpeg', [...input, '-c:v', 'qtrle', '-pix_fmt', 'argb', `${outBase}.mov`], { stdio: 'ignore' });
 } else {

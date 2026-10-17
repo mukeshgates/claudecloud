@@ -137,18 +137,26 @@ window.ENGINE = (() => {
     grain(t, E.grain ?? 0.11);
   }
 
-  function grain(t, strength) {
-    const ctx = grainC.getContext('2d');
-    const w = grainC.width, h = grainC.height;
-    const img = ctx.createImageData(w, h);
-    let s = Math.floor(t * 30) * 9301 + 49297;
-    for (let i = 0; i < img.data.length; i += 4) {
-      s = (s * 9301 + 49297) % 233280;
-      const v = (s / 233280) * 255;
-      img.data[i] = img.data[i + 1] = img.data[i + 2] = v;
-      img.data[i + 3] = 255 * strength;
+  // Grain: ten noise tiles made once at build time, cycled per frame.
+  const tiles = [];
+  function makeTiles() {
+    for (let k = 0; k < 10; k++) {
+      const c = document.createElement('canvas'); c.width = 480; c.height = 270;
+      const ctx = c.getContext('2d'); const img = ctx.createImageData(480, 270);
+      let s = k * 7919 + 13;
+      for (let i = 0; i < img.data.length; i += 4) { s = (s * 9301 + 49297) % 233280; const v = (s / 233280) * 255; img.data[i] = img.data[i + 1] = img.data[i + 2] = v; img.data[i + 3] = 255; }
+      ctx.putImageData(img, 0, 0); tiles.push(c);
     }
-    ctx.putImageData(img, 0, 0);
+  }
+  function grain(t, strength) {
+    if (!tiles.length) makeTiles();
+    const ctx = grainC.getContext('2d');
+    ctx.clearRect(0, 0, grainC.width, grainC.height);
+    ctx.globalAlpha = strength;
+    const f = Math.floor(t * 30), tile = tiles[f % 10];
+    const ox = (f * 37) % 480 - 480, oy = (f * 53) % 270 - 270;
+    for (let x = ox; x < grainC.width; x += 1440) for (let y = oy; y < grainC.height; y += 810) ctx.drawImage(tile, x, y, 1440, 810);
+    ctx.globalAlpha = 1;
   }
 
   return { build, render };
