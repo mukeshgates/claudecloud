@@ -11,3 +11,5 @@
 | logo_*.png | Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta, Tesla | - | Public domain or CC0 on Commons; trademarks apply (editorial use) | Wikimedia Commons |
 
 On-screen credit line for the end card: "Photos: Friends of Europe, Steve Jurvetson, Oracle PR / Hartmann Studios (CC BY 2.0); IMF; Carol M. Highsmith / Library of Congress."
+
+`cut_*.png` are cutouts of the photos above (background removed with rembg / ISNet), same credits apply.

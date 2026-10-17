@@ -2,28 +2,17 @@
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head>
 <body>
 <svg class="defs">
-  <!-- Duotone: desaturate, then map dark to near-black red and light to warm bone. -->
-  <filter id="duoRed" color-interpolation-filters="sRGB">
-    <feColorMatrix type="saturate" values="0"/>
+  <!-- Cold grade: pull saturation down, cool the shadows, keep skin readable. -->
+  <filter id="cold" color-interpolation-filters="sRGB">
+    <feColorMatrix type="saturate" values="0.35"/>
     <feComponentTransfer>
-      <feFuncR type="table" tableValues="0.06 0.78 0.96"/>
-      <feFuncG type="table" tableValues="0.04 0.10 0.90"/>
-      <feFuncB type="table" tableValues="0.05 0.14 0.84"/>
-    </feComponentTransfer>
-  </filter>
-  <!-- Cold: desaturate, lift blacks slightly blue, keep highlights neutral. -->
-  <filter id="duoCold" color-interpolation-filters="sRGB">
-    <feColorMatrix type="saturate" values="0.15"/>
-    <feComponentTransfer>
-      <feFuncR type="table" tableValues="0.04 0.46 0.92"/>
-      <feFuncG type="table" tableValues="0.05 0.48 0.93"/>
-      <feFuncB type="table" tableValues="0.08 0.54 0.95"/>
+      <feFuncR type="table" tableValues="0.03 0.44 0.90"/>
+      <feFuncG type="table" tableValues="0.04 0.47 0.92"/>
+      <feFuncB type="table" tableValues="0.07 0.53 0.96"/>
     </feComponentTransfer>
   </filter>
 </svg>
 <div id="stage"></div>
-<div class="leak"></div>
-<div class="scan"></div>
 <div class="vig"></div>
 <canvas class="grain" width="960" height="540"></canvas>
 <script src="engine.js"></script>
@@ -35,7 +24,6 @@
   if (name === 'lt') SCENES.lt = LOWER_THIRD(Q.get('name') || 'Name', Q.get('role') || 'Role', Q.get('date') || '', Number(Q.get('dur') || 5));
   ENGINE.build(SCENES[name]);
   window.render = t => ENGINE.render(t);
-  window.SCENE_DUR = SCENES[name].dur;
   render(0);
 </script>
 </body></html>

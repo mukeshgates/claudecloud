@@ -1,35 +1,31 @@
-/* fern-style base: cold near-black, muted photos, one red accent, warm paper for documents. */
+/* Base look: cold near-black, muted photographs, one red accent used thin, warm paper for documents. */
 :root {
-  --bg: #0a0b0d;
-  --bg2: #15171b;
-  --red: #c8102e;
-  --paper: #efe9dc;
-  --ink: #f1efe9;
-  --ink2: #9a9ba3;
+  --bg: #08090b;
+  --bg2: #15181d;
+  --red: #c41e3a;
+  --paper: #ece6d8;
+  --ink: #ebe8e1;
+  --ink2: #8f929b;
 }
 html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--bg); }
 body { font-family: 'Inter Display', 'Inter', sans-serif; color: var(--ink); }
-#stage { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, var(--bg2) 0%, var(--bg) 72%); overflow: hidden; }
+#stage { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, var(--bg2) 0%, var(--bg) 70%); overflow: hidden; }
 .layer { position: absolute; left: 0; top: 0; will-change: transform, opacity; }
 .layer img { display: block; width: 100%; height: 100%; object-fit: cover; }
-/* Archive print: photo on a paper card with a thin border and a soft shadow, tilted a few degrees. */
-.card { box-sizing: border-box; background: var(--paper); padding: 22px 22px 70px; box-shadow: 0 40px 80px rgba(0,0,0,.65), 0 2px 0 rgba(255,255,255,.08) inset; }
-.card img { object-fit: cover; }
-.card.tag { padding: 18px; }
+.card { box-sizing: border-box; background: var(--paper); padding: 16px 16px 52px; box-shadow: 0 40px 70px rgba(0,0,0,.6); }
+.card.tag { padding: 14px; }
 .card.tag img { object-fit: contain; filter: none; }
-.card .cap { position: absolute; left: 24px; bottom: 22px; font: 500 22px 'Inter', sans-serif; color: #3a372f; letter-spacing: 1px; }
-.txt { position: absolute; left: 0; top: 0; white-space: pre-line; text-shadow: 0 3px 28px rgba(0,0,0,.85), 0 1px 3px rgba(0,0,0,.6); }
-/* Alpha render: the page and the clip windows are transparent, so the clip sits underneath in the edit. */
-body.alpha, body.alpha #stage { background: transparent; }
-body.alpha .hole { background: transparent; color: transparent; }
-body.alpha .grain, body.alpha .scan { display: none; }
-.hole { position: absolute; border: 4px solid var(--red); background: #26282e; display: flex; align-items: center; justify-content: center; color: #6c6e76; font: 700 34px 'Inter', sans-serif; }
-.box { position: absolute; border: 5px solid var(--red); box-sizing: border-box; }
-.bar { position: absolute; }
-.under { position: absolute; height: 10px; background: var(--red); transform-origin: left center; }
-.grain, .vig, .leak, .scan { position: absolute; inset: 0; pointer-events: none; }
+.card .cap { position: absolute; left: 18px; bottom: 16px; font: 500 18px 'Inter', sans-serif; color: #3a372f; letter-spacing: 1.5px; }
+.txt { position: absolute; left: 0; top: 0; white-space: pre-line; text-shadow: 0 2px 30px rgba(0,0,0,.7); }
+.hole { position: absolute; border: 2px solid rgba(235,232,225,.35); background: #1d2025; display: flex; align-items: center; justify-content: center; color: #5a5d66; font: 600 30px 'Inter', sans-serif; box-shadow: 0 40px 90px rgba(0,0,0,.6); }
+.bar, .under { position: absolute; transform-origin: left center; }
+.dust canvas { display: block; }
+.dust, .shaft { position: absolute; inset: 0; width: 1920px; height: 1080px; pointer-events: none; }
+.shaft { mix-blend-mode: screen; }
+.grain, .vig { position: absolute; inset: 0; pointer-events: none; }
 .grain { mix-blend-mode: overlay; width: 1920px; height: 1080px; }
-.vig { background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,.72) 100%); }
-.scan { background: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 4px); mix-blend-mode: overlay; }
-.leak { mix-blend-mode: screen; }
+.vig { background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,.78) 100%); }
+body.alpha, body.alpha #stage { background: transparent; }
+body.alpha .hole { background: transparent; color: transparent; box-shadow: none; }
+body.alpha .grain { display: none; }
 svg.defs { position: absolute; width: 0; height: 0; }
