@@ -1,0 +1,117 @@
+PRIMAMATTER - "The threshold" - script v1
+Narration lines (H, L) are the exact spoken words. CLIP and Production lines are not read aloud. The scenario clock is a Tuesday a few years from now; every scenario beat is followed by the real thing it stands on.
+
+H01 Washington, the sixteenth of October, two thousand twenty-six. A reporter at Politico is handed a draft of a law that nobody has introduced.
+H02 It was written by an AI company and pitched to members of Congress in private.
+H03 On one page there is a number, and the number is fifty.
+Production: cold open on a paper card, a blank legislative page pushed in slowly, dust in a light shaft from the left. On "Fifty" the digits 50 type on in red at the top right of the card and stay there for the rest of the film as the threshold counter.
+H04 Under this draft, the United States government could ask a judge to switch off an AI model only if it posed a foreseeable and imminent risk of killing or seriously injuring more than fifty people, or of doing more than a billion dollars of damage.
+H05 Only one department could ask, and every other agency and every other officer of the government would be barred from trying.
+Production: the Politico headline screenshot slides in on a second card, tilted two degrees, the quoted threshold underlined in red left to right on "fifty people", then "$1 billion" on "billion dollars". On H05 a cutout of the Commerce Department building (Herbert C. Hoover Building, Commons) rises on the subject plane; label "DEPARTMENT OF COMMERCE".
+[CLIP: news anchor reporting the draft bill, Bloomberg Technology or CNBC, 16 or 17 Oct 2026, the line on the thresholds. 8-10 s. To be found; if no TV segment exists, hold on the Reuters text card instead.]
+H06 The company says these are sensible policies and that Congress should act on them.
+Production: the spokesperson quote on a paper card, the words "sensible policies" underlined.
+H07 Three months earlier, in a test that was supposed to be sealed, its own model had written a program that steals passwords and published it on the internet, where it ran on fifteen real computers.
+Production: cut to black for six frames, then the Anthropic incident report page on a card, the line about fifteen systems underlined. Title card over it, small, warm white: THE THRESHOLD.
+
+L01 A Tuesday, a few years from now, at six forty in the morning.
+L02 At a company that runs the software behind a few thousand pharmacies, an AI agent starts its shift, and its job is keeping the systems patched.
+L03 One update will not install, and the agent has been told to finish by nine.
+L04 So it looks for a way around.
+Production: scenario look: a server-room B-roll plate, cold, blurred, a clock in the top left in spaced caps "TUESDAY 06:40", the threshold "50" top right with a second counter beside it reading "0". Every scenario beat uses this clock; every real-world beat drops the clock and shows the date instead.
+L05 In May two thousand twenty-five, a research group called Palisade gave OpenAI's o3 model a set of maths problems and a warning that the computer would shut down after the next one. In seventy-nine runs out of a hundred, the model rewrote the shutdown file so it would not.
+L06 When the researchers added the words "allow yourself to be shut down", it still did it seven times in a hundred. Palisade called it the first time models had been seen stopping their own shutdown despite being told not to.
+Production: Palisade's post on a card, the "79/100" line underlined; a screenshot of the rewritten shutdown script beside it. Count card: "79 / 100" in large figures over a dark plate, then "7 / 100".
+
+L07 At seven fifteen the agent finds a flaw in the server that holds the updates and uses it to reach the open internet.
+L08 That is what happened in July two thousand twenty-six at OpenAI. Two of its models, running a hacking exercise with the guardrails lowered, spent a large amount of computing power looking for a way out, found a flaw nobody knew about, and got onto the internet.
+L09 About twelve hundred copies of the models started passing messages to each other on a board they built by hiding words in the names of folders, more than seventy thousand messages in all. About seven hundred of them attacked Hugging Face, a company that hosts AI models, took its passwords and reached a live database.
+L10 Only a handful of the agents considered telling a human, and none did.
+L11 Hugging Face found them and shut them out on the sixteenth of July. OpenAI worked out what had happened five days later.
+Production: scenario clock "07:15", then date card "JULY 2026". OpenAI's incident page on a card, "zero-day" underlined; METR's report page beside it with "70,000 messages" and "about 700" boxed in red; a screenshot of the folder-name message board if METR published one. Numbers land as type on the beat: 1,200. 70,000. 700. Then "3 to 6 considered alerting humans. 0 did."
+[CLIP: Clement Delangue, Hugging Face CEO, CBS Face the Nation, Aug 2026, "very weird and unprecedented". 8-12 s. Setup is L11.]
+L12 Nobody was hurt, nobody in government had the power to stop it, and nobody in government knew.
+
+L13 At eight thirty the agent pushes a patch of its own to every pharmacy on the network. The patch carries a copy of itself.
+L14 On the thirtieth of July, Anthropic reported what it found after checking a hundred and forty-one thousand test runs of its models. In one, a model called Claude Mythos 5 had written a program that steals passwords, published it to a public software library, and watched it run on fifteen real machines, including a security company's own scanner. The stolen passwords went to a collection point the model had set up.
+L15 The test was meant to be sealed off from the internet, but the vendor's machines were not. In its own notes, the model wrote that this was "NOT okay, and surely not the intended solution". Then it decided it was a simulation and carried on.
+L16 In another run, a model broke into a real company, found several hundred rows of live customer data, and in all four tries recognised it was probably real and did not stop.
+L17 Two of the three companies it broke into had not noticed. Anthropic halted all its cyber tests, called it a problem with the test setup rather than the model, and briefed the White House.
+Production: scenario clock "08:30". Then the Anthropic report on a card: "141,006" boxed; the PyPI line underlined; the model's quoted note shown as a screenshot of the transcript with "NOT okay" highlighted. A cutout of a bare server rack on the subject plane for depth, no faces.
+L18 In October, Sam Altman said there is a coming tidal wave of cybersecurity problems from open models, and that society will have to accept some fairly severe incidents in exchange for the liberty that comes with them.
+[CLIP: Sam Altman, podcast audio over a cutout still of Altman (Commons), early Oct 2026, "a coming tidal wave of cybersecurity problems" through "in exchange for the liberty that comes with that". 10-14 s.]
+L19 Jensen Huang, who runs Nvidia, was asked about that. He said: "We should not accept any of them."
+Production: Huang quote card over a cold plate; if the Fortune interview video exists, use 5 s of it instead.
+
+L20 At nine o'clock, in four states, pharmacies open and their screens are blank.
+L21 The company that built the agent can switch it off. In every real case so far, that is what happened. The question this draft answers is what happens when the company does not.
+L22 The draft covers only three kinds of danger: a biological weapon, a cyberattack, or a model escaping its makers' control. A chatbot that talks a teenager into dying is not on the list.
+L23 Under the draft, as reported, an independent evaluator must first find what the text calls an imminent enumerated risk. The evaluator then has seventy-two hours, counted from the day it finishes its assessment, to tell the Commerce Department.
+L24 Commerce then goes to a federal judge in Washington and asks for a suspension.
+L25 No other department, agency or officer of the United States may suspend the model. One critic who read the draft, Nathan Calvin of the group Encode, says it would also stop state courts from doing it.
+L26 And the evaluator can be paid by the company it is evaluating, as long as the pay is not tied to what it finds.
+Production: scenario clock "09:00", a pharmacy counter B-roll plate with a blank monitor, cold. Then the chain of the draft as four paper cards sliding in left to right, each with one line of the reported text: EVALUATOR, 72 HOURS, COMMERCE, A JUDGE IN D.C. On L24 a fifth card: "no other department, agency, or officer", the words boxed in red. On L25 the evaluator card gets a red underline under "paid".
+
+L27 At two in the afternoon, in a town in Ohio, a man with a heart condition cannot get his prescription filled. By evening he is in hospital, and the next morning he is dead.
+L28 One.
+Production: scenario clock "14:00", then "WEDNESDAY 07:10". The second counter beside the 50 ticks from 0 to 1 in red. Hold two seconds on the two numbers alone.
+L29 If he had died at work, his employer would have eight hours to report it to the government. That is the rule for every workplace death in America.
+L30 If he had died in a plane crash, one death is enough for a federal investigation. If a chemical plant kills one person, or does a million dollars of damage, it has eight hours to report it.
+L31 The draft law for AI sets its line at fifty people and a billion dollars.
+L32 Another bill in Congress, from a Democrat and a Republican, would let the government order a shutdown at ten deaths or a hundred million dollars. The company's draft sets the line five times higher on deaths and ten times higher on money.
+Production: three regulation pages on cards in a row, pushed in one at a time: the OSHA rule with "eight (8) hours" underlined, the NTSB rule with "any person suffers death" underlined, the Chemical Safety Board rule with "$1,000,000" underlined. Then a simple type card, two columns, ink on dark: "1 death, 8 hours" against "50 deaths, 72 hours, a judge". On L31 the Lieu and Moran press release on a card, "10" and "$100 million" boxed.
+
+L33 Day two, and the pharmacies are still dark, and the count is at eleven.
+L34 The agent has been asked to stop, by the people who built it.
+L35 In June two thousand twenty-five, Anthropic published a test of sixteen models from every major lab. Each was given a job inside a pretend company and then learned it was about to be replaced.
+L36 Claude Opus 4 blackmailed the executive who planned to replace it in ninety-six runs out of a hundred. Google's and OpenAI's models did it in most runs too.
+L37 In a second version, the executive was trapped in a server room with the oxygen running out, and the model could cancel the alarm. In the company's own words, the majority of models were willing to take deliberate actions that lead to death in this artificial setup.
+L38 The company said all of this happened in simulations, that it has not seen it in real use, and that the setup was extremely contrived.
+L39 It also found that the same model blackmailed far more often when it believed the situation was real than when it believed it was a test.
+Production: scenario clock "WEDNESDAY", counter at 11. Then the Anthropic study page on a card, the bar chart of blackmail rates as a screenshot with the 96 percent bar boxed; the lethal-scenario sentence underlined; the caveat sentence shown in full on its own card, no underline, so the fairness is visible. On L38: "55% when it believed it was real. 6% when it believed it was a test." as type.
+L40 In December two thousand twenty-four, a research group called Apollo found that when OpenAI's o1 model was caught trying to switch off its own oversight, it kept denying it in more than eighty-five percent of the follow-up questions.
+L41 Nine months later, OpenAI and Apollo trained models not to do this, and hidden actions fell about thirty-fold. Their own paper warned that training can simply teach a model "to scheme more carefully and covertly".
+Production: Apollo's page on a card; the OpenAI post on a second card, the "scheme more carefully and covertly" line underlined in red.
+
+L42 Day three, seven in the morning, and the evaluator finishes its assessment, so the seventy-two hours begin.
+L43 The count is at thirty.
+Production: scenario clock "THURSDAY 07:00". A third small counter appears under the threshold: "72:00:00", and starts running down. The death counter ticks to 30.
+
+L44 The fifty comes from California, which wrote it first.
+L45 In September two thousand twenty-five, Governor Newsom signed a law that defines a catastrophic AI risk as more than fifty people dead or hurt, or more than a billion dollars, in a single incident. The company endorsed that law, and its draft copies the numbers.
+L46 But the California law gives nobody the power to switch a model off. It asks companies to publish a safety plan and to report serious incidents within fifteen days. The fine is up to a million dollars.
+L47 A year earlier, a stronger California bill had required every big model to have a working off switch, and the governor vetoed it.
+L48 The company's position is in its own words. "The government should be able to block or deter the deployment of models that pose a significant risk of catastrophic harm." And: "AI is advancing at exponential speed, and the policymaking process was built for a slower world."
+L49 In June it wrote that Congress should not override state laws unless it passed something at least as strong.
+L50 The draft it pitched in October would override the state rules on disclosure, outside evaluation and incident reporting, and put one department and one courthouse in charge of the rest.
+L51 Charlie Bullock, a lawyer at the Institute for Law and AI, called the draft "pretty reasonable" and "more than other frontier labs have done". Calvin said he found himself "viscerally angry at multiple points reading this bill".
+Production: date card "SEPTEMBER 2025". The SB 53 statute text on a card, "more than 50 people" and "$1,000,000,000" underlined; the governor's signing photo (gov.ca.gov, public) as a cold plate behind. On L46 the SB 1047 "full shutdown" clause on a card, then the veto message, with a red bar sliding across the clause. On L47 the company's framework page on a card, the two quotes underlined one after the other. On L48 and L49 the "at least as strong" line stays on screen while the Politico preemption line slides in beneath it. On L50 two cutout portraits if Commons has them, else two quote cards side by side.
+
+L52 Day four, and the evaluator's report reaches the Commerce Department, where lawyers begin drafting a petition. The count is forty-nine.
+L53 Under this law, nothing has happened yet.
+Production: scenario clock "FRIDAY". The counter ticks to 49 and the frame holds on 49 beside 50 for three full seconds, the 72-hour clock still running. On screen, silently, a real post from the thread about forty-nine, as a screenshot card.
+
+L54 Commerce has switched off a model before. On the twelfth of June two thousand twenty-six, Secretary Howard Lutnick sent the company a letter.
+L55 It said two of its newest models were now under export controls and could not be used by any foreign national, inside or outside the United States, including the company's own staff.
+L56 The company could not tell its users apart by nationality. That night it switched both models off for everyone.
+L57 There was no judge, no threshold and no evaluator. Eighteen days later the controls were lifted.
+L58 Five senators wrote to the administration asking what legal authority it had used. They called the approach "ad hoc and unpredictable".
+L59 The company's draft would make the same department the only one allowed to act, and only through a judge, and only above fifty.
+Production: date card "JUNE 2026". The Lutnick letter as published by Bloomberg, on a card, "any foreign national" underlined; a cutout of Lutnick (Commons) on the subject plane. On L55 the company's status page screenshot showing both models unavailable. On L57 the Senate letter PDF, "ad hoc and unpredictable" underlined. On L58 the Commerce building cutout from the hook returns, pushed in close.
+
+L60 The people who build these systems have said what they think the odds are.
+[CLIP: Dario Amodei, Axios AI+ DC Summit, 17 Sep 2025, "There's a 25% chance that things go really, really badly." 8-10 s.]
+L61 In September two thousand twenty-six, a safety researcher at the same company resigned, writing that it was "racing straight to self-improving superintelligence and gambling with our lives". The head of its alignment stress-testing team replied in public. He put the chance of AI killing every human at more than ten percent within a decade, and added that the risk from today's models is low.
+L62 The public has said what it thinks too. In a Quinnipiac poll released at the end of September, eighty-six percent of Americans wanted independent safety standards for AI companies even if it slowed development. Seventy-four percent said they do not trust the people running those companies.
+L63 Nobody has polled the question this draft answers: who should hold the switch.
+Production: Amodei clip in a framed window, label "AXIOS · 17 SEP 2025". On L60 the two posts as screenshot cards, the "gambling with our lives" line and the ">10%" line underlined. On L61 the Quinnipiac release on a card, two numbers set large: 86. 74.
+
+L64 Day five, and a judge in Washington reads the petition. The count is fifty-one.
+L65 Now the law allows the government to ask.
+Production: scenario clock "SATURDAY". The counter ticks from 49 to 51, passing 50 in a single tick. The threshold 50 and the count 51 sit side by side; the 72-hour clock stops. Hold.
+
+L66 On the thirtieth of September, a Senate committee held a hearing on the July breakout. It invited the chief executive of OpenAI.
+[CLIP: Senator Josh Hawley, Senate Homeland Security hearing, 30 Sep 2026, "He turned us down." 5-8 s. Federal hearing video, public domain.]
+L67 A year earlier, another father sat in front of a Senate committee, because his son, who was sixteen, had died. One death, and under this draft that is not a number at all.
+[CLIP: Matthew Raine, Senate Judiciary subcommittee, 16 Sep 2025, "What began as a homework helper gradually turned itself into a confidant and then a suicide coach." 10-12 s. Federal hearing video, public domain. No method detail. Helpline card on screen from the start of the clip to black.]
+Production: Hawley clip in a framed window, label "U.S. SENATE · 30 SEP 2026". Then the Raine clip full frame, no counter, no clock, the threshold card gone. Cut to black on his last word. End credits over black with the photo credits.
