@@ -14,7 +14,7 @@ Examples:
   python credits_agent.py list --dir ~/my-project
   python credits_agent.py resume --dir ~/my-project               # most recent session there
   python credits_agent.py resume --dir ~/my-project --id <session-id>
-  python credits_agent.py research "The $6.3B Binance hack" --out binance.md
+  python credits_agent.py research 'The $6.3B Binance hack' --out binance.md   # single quotes: "$6" would be read as a shell variable
 
 Each turn prints its cost. --budget caps spend per run (default $5).
 """
