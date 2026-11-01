@@ -116,8 +116,10 @@ async def resume(args) -> None:
     )
     if args.id:
         options.resume = args.id
-    else:
+    elif any(sessions_dir(args.dir).glob("*.jsonl")):
         options.continue_conversation = True
+    else:
+        print(f"No saved session for {args.dir}; starting a new one there.")
 
     prompt = args.prompt or "Continue where you left off. First say in two lines what you were doing and what's next."
     async with ClaudeSDKClient(options=options) as client:
