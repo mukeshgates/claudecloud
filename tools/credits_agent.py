@@ -181,6 +181,8 @@ def main() -> None:
     if args.cmd == "list":
         list_sessions(args.dir)
         return
+    if not args.dir.is_dir():
+        sys.exit(f"Folder not found: {args.dir}\nCheck the exact path (e.g. `dir D:\\ /s /b /ad | findstr /i binance` on Windows).")
     if not os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit("Set ANTHROPIC_API_KEY to a key from the Console org that holds the credits.")
     asyncio.run(resume(args) if args.cmd == "resume" else research(args))
