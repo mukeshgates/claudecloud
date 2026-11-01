@@ -103,14 +103,14 @@ def show(message) -> None:
 
 def base_tools(allow_bash: bool) -> list[str]:
     tools = ["Read", "Edit", "Write", "Glob", "Grep", "WebSearch", "WebFetch"]
-    return tools + ["Bash"] if allow_bash else tools
+    return tools + ["Bash", "PowerShell"] if allow_bash else tools
 
 
 async def resume(args) -> None:
     options = ClaudeAgentOptions(
         cwd=str(args.dir),
         allowed_tools=base_tools(args.allow_bash),
-        permission_mode="acceptEdits",
+        permission_mode="auto" if args.auto else "acceptEdits",
         max_budget_usd=args.budget,
         model=args.model,
     )
@@ -166,6 +166,8 @@ def main() -> None:
     p_res.add_argument("--id", help="session ID (default: most recent in --dir)")
     p_res.add_argument("--prompt", help="first message to send")
     p_res.add_argument("--allow-bash", action="store_true", help="let Claude run shell commands without asking")
+    p_res.add_argument("--auto", action="store_true",
+                       help="auto mode: run unattended; a safety classifier reviews each shell command and blocks risky ones")
 
     p_rs = sub.add_parser("research", help="source-checked research on a topic")
     p_rs.add_argument("topic")
@@ -183,6 +185,8 @@ def main() -> None:
         return
     if not args.dir.is_dir():
         sys.exit(f"Folder not found: {args.dir}\nCheck the exact path (e.g. `dir D:\\ /s /b /ad | findstr /i binance` on Windows).")
+    if getattr(args, "auto", False):
+        print("Auto mode: Claude runs without asking; a safety classifier reviews each shell command and blocks risky ones.")
     if not os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit("Set ANTHROPIC_API_KEY to a key from the Console org that holds the credits.")
     asyncio.run(resume(args) if args.cmd == "resume" else research(args))
