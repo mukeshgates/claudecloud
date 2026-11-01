@@ -112,7 +112,7 @@ async def resume(args) -> None:
         allowed_tools=base_tools(args.allow_bash),
         permission_mode="auto" if args.auto else "acceptEdits",
         max_budget_usd=args.budget,
-        max_buffer_size=64 * 1024 * 1024,  # big tool outputs (images, logs) exceed the 1 MB default
+        max_buffer_size=1024 * 1024 * 1024,  # 1 GB: big tool outputs (images, logs) exceed the 1 MB default
         model=args.model,
     )
     if args.id:
@@ -143,7 +143,7 @@ async def research(args) -> None:
         permission_mode="acceptEdits",
         system_prompt=RESEARCH_PROMPT,
         max_budget_usd=args.budget,
-        max_buffer_size=64 * 1024 * 1024,  # big tool outputs (images, logs) exceed the 1 MB default
+        max_buffer_size=1024 * 1024 * 1024,  # 1 GB: big tool outputs (images, logs) exceed the 1 MB default
         model=args.model,
     )
     task = f"Research this topic for a script: {args.topic}"
